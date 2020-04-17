@@ -1,0 +1,44 @@
+body {
+    background-color: #eee;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.table th, 
+.table td {
+    text-align: center;
+    padding: 0.4rem;
+}
+
+.card {
+    border: 0;
+    border-radius: 0;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-title a {
+    text-decoration: none;
+    color: black;
+}
+
+.card-overlay {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 96px;
+    padding: 0.8rem;
+    background: #2c3e739e;
+}
+
+form label {
+    font-size: small;
+}
+
+.alert {
+    padding: 0.25rem 1.25rem;
+    font-size: smaller;
+}

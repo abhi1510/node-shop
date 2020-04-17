@@ -1,0 +1,53 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/navbar.ejs') %>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card mt-3">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="<%= product.imageUrl %>" class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body" style="background-color: transparent">
+                                <h4 class="card-title"><%= product.title %></h4>
+                                <h5 class="card-text font-weight-bold">Rs. <%= product.price %></h5>
+                                <p class="card-text">Available: <span class="text-success">In Stock</span></p>
+                                <p class="card-text">
+                                    <i class="fa fa-star text-success"></i>
+                                    <i class="fa fa-star text-success"></i>
+                                    <i class="fa fa-star text-success"></i>
+                                    <i class="fa fa-star text-success"></i>
+                                    <i class="fa fa-star-o"></i>
+                                    <a href="" class="ml-2 text-dark"><small>(<%= product.meta.rating %> ratings and 2 reviews)</small></a>
+                                </p>
+                                <p class="card-text">
+                                    <span class="mr-3">Size:</span>
+                                    <span class="badge badge-light p-2">28</span>
+                                    <span class="badge badge-light p-2">30</span>
+                                    <span class="badge badge-light p-2">32</span>
+                                    <span class="badge badge-light p-2">34</span>
+                                    <span class="badge badge-light p-2">36</span>
+                                </p>
+                                <button class="btn btn-outline-danger btn-sm">
+                                    <i class="fa fa-heart-o"></i> Wishlist
+                                </button>
+                                <button class="btn btn-outline-success btn-sm">
+                                    <i class="fa fa-shopping-bag"></i> Add to Cart
+                                </button>
+                                <hr>
+                                <h5>Product Description</h5>
+                                <p class="card-text text-justify"><%= product.description %></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('../includes/end.ejs') %>

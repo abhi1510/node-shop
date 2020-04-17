@@ -1,0 +1,48 @@
+<%- include('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('../includes/navbar.ejs') %>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-2 col-lg-4"></div>
+            <div class="col-sm-12 col-md-8 col-lg-4">
+                <div class="card shadow-sm mt-4">
+                    <div class="card-body">
+                        <h4 class="mb-4">Signup with eCommerce</h4>
+                        <% if(errorMessage) { %>
+                            <div class="alert alert-danger alert-dismissible">
+                                <%= errorMessage %>
+                            </div>
+                        <% } %>
+                        <form action="/signup" method="POST" class="mb-3">
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                            <div class="form-group">
+                                <label for="email">Email address:</label>
+                                <input type="email" class="form-control" placeholder="Enter email" id="email"
+                                    name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" placeholder="Enter password" id="pwd"
+                                    name="password">
+                            </div>
+                            <div class="form-group">
+                                <label for="cpwd">Confirm Password:</label>
+                                <input type="password" class="form-control" placeholder="Enter password" id="cpwd"
+                                    name="cpassword">
+                            </div>
+                            <button type="submit" class="btn btn-block btn-primary">Create Account</button>
+                        </form>
+                        <div class="card-text text-center my-4" style="font-size: smaller;">
+                            Already have an account? <a href="/login">Login!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-2 col-lg-4"></div>
+        </div>
+    </div>
+
+
+    <%- include('../includes/end.ejs') %>
